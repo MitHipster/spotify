@@ -86,7 +86,7 @@ $(document).ready(function() {
     document.getElementById(loginBtn).addEventListener('click', function() {
 
       let client_id = '75dcf1660ea04c6ba07aaafb9b5735a5'; // Your client id
-      let redirect_uri = 'https://mithipster.github.io/project_10_use_public_api/'; // Your redirect uri
+      let redirect_uri = 'https://mithipster.github.io/spotify/'; // Your redirect uri
 
       let state = generateRandomString(16);
 
