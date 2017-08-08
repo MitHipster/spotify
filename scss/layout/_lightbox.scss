@@ -1,0 +1,214 @@
+//============================================================
+// LightGallery Custom Styles
+//============================================================
+
+.lg-on {
+  overflow: hidden; // remove scrollbars from main page
+}
+
+//---------- Background -----------
+
+.lg-backdrop {
+  background-color: $color-bg-body;
+}
+
+//---------- Navigation -----------
+
+.lg-nav {
+  span {
+    @include font-settings(0.8rem, 400, $color-text-gray);
+    @include mq('mobile') {
+      font-size: 0.9rem;
+    }
+    &.lg-forward-slash {
+      padding: 0 5px;
+    }
+  }
+  .lg-section {
+    @include font-settings(0.9rem, 300, $color-text-light);
+    @extend %hover-link;
+    &.active {
+      color: $color-bg-button;
+    }
+    @include mq('mobile') {
+      font-size: 1rem;
+    }
+  }
+}
+
+//--------- Main Styling ----------
+
+.lg-custom.lg-outer {
+  .lg-actions {
+    .lg-next,
+    .lg-prev {
+      top: 24%;
+      background-color: $color-bg-button;
+      color: $color-text-light;
+      @extend %hover-btn;
+      @include mq('mobile') {
+        top: 28.5%;
+      }
+
+    }
+    .lg-next {
+      right: $edge-sm - 5px;
+    }
+    .lg-prev {
+      left: $edge-sm - 5px;
+    }
+  }
+  .lg-toolbar {
+    background-color: $color-bg-search;
+    .lg-icon {
+      background-color: $color-bg-button;
+      color: $color-text-light;
+      @extend %hover-btn;
+    }
+  }
+  .lg-sub-html {
+//    position: absolute; /* Attempt to fix disappearing section nav bar */
+    z-index: 1080;
+    max-width: 560px;
+    top: 41.5%;
+    overflow-y: scroll;
+    background-color: $color-bg-body;
+    color: $color-text-light;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 $edge-sm;
+    @include mq('mobile') {
+      top: 50.25%;
+    }
+  }
+  #lg-counter {
+    @include font-settings($weight: 400, $color: $color-text-dark);
+    padding-top: 16px;
+  }
+  .lg-item,
+  .lg-img-wrap {
+    &:before {
+      height: 24%;
+      @include mq('mobile') {
+        height: 28.5%;
+      }
+    }
+  }
+  .lg-img-wrap {
+    .lg-image {
+      max-width: 300px;
+      @include mq('mobile') {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+//-------- Album details ----------
+
+.lg-album-details {
+  padding-top: 20px;
+  span {
+    @include font-settings(0.8rem, 400, $color-text-gray);
+    @include mq('mobile') {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+//-------- Album Summary ----------
+
+.lg-album-info {
+  p {
+    @include font-settings(0.9rem, 300, $color-text-light);
+    margin: 0;
+    padding: ($edge-sm - 5px) 0 0;
+    @include mq('mobile') {
+      font-size: 1rem;
+    }
+  }
+  p:last-child {
+    padding: ($edge-sm - 5px) 0 $edge-sm - 5px;
+  }
+}
+
+//------------ Tracks -------------
+
+.lg-track {
+  @include display-flex($justify: space-between, $align: center);
+  padding: 1px 0;
+  @extend %hover-li-track;
+  p {
+    padding-left: 8px;
+    margin: 0;
+  }
+  .lg-not {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+  }
+  .lg-track-num {
+    @include font-settings(0.8rem, 400, $color-text-gray);
+    width: 24px;
+    @include mq('mobile') {
+      @include font-settings(0.9rem, 300, $color-text-gray);
+    }
+  }
+  .lg-track-name {
+    flex: 1;
+    line-height: 1.2;
+    @include font-settings(0.8rem, 300);
+    @include mq('mobile') {
+      font-size: 0.9rem;
+    }
+  }
+  .lg-track-duration {
+    @include font-settings(0.8rem, 400, $color-text-gray);
+    padding-right: 5px;
+    @include mq('mobile') {
+      @include font-settings(0.9rem, 300, $color-text-gray);
+    }
+  }
+}
+
+//----------- Comments ------------
+
+.lg-comment {
+  @include display-flex($align: flex-start);
+  margin-top: $edge-lg;
+  padding-right: 5px;
+  div {
+    flex: 1;
+  }
+  .lg-user-image {
+    width: 48px;
+    height: 48px;
+    margin-right: $edge-sm;
+    border-radius: 50%;
+  }
+  .lg-user-comment {
+    @include font-settings(0.8rem, 300);
+    @include mq('mobile') {
+      @include font-settings(0.9rem, 200);
+    }
+  }
+}
+
+.lg-comment-header {
+  @include display-flex($justify: space-between);
+  border-bottom: 1px solid $color-bg-button;
+  padding-bottom: 4px;
+  .lg-user-name,
+  .lg-posted {
+    margin: 0;
+    @include font-settings(0.8rem, 400, $color-text-gray);
+    @include mq('mobile') {
+      @include font-settings(0.9rem, 300, $color-text-gray);
+    }
+  }
+  img {
+    width: 14px;
+    height: 14px;
+    margin-bottom: -3px;
+  }
+}

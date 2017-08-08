@@ -1,0 +1,36 @@
+// Font styles
+
+@mixin font-settings($size: 1rem, $weight: 300, $color: inherit) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// Flex display settings
+
+@mixin display-flex($direction: null, $wrap: null, $justify: null, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align; 
+}
+
+// Media queries
+@mixin mq($device) {
+  @if $device == 'mobile' {
+    @media (min-width: $mobile-width) {
+      @content;
+    }
+  }
+  @else if $device == 'tablet' {
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
+  @else if $device == 'desktop' {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+}

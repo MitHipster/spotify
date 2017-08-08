@@ -1,0 +1,25 @@
+//============================================================
+// Sort Input Styles
+//============================================================
+
+//----------- Sort Options -------------
+
+.sort-label {
+  @include font-settings(0.9rem, 300, $color-text-gray);
+  text-align: right;
+  padding-bottom: $edge-sm;
+  .sort-selection {
+    @include font-settings($size: 1rem, $color: $color-text-light);
+    @extend %hover-link;
+    &.active {
+      color: $color-bg-button;
+    }
+  }
+  ~ .sort-label {
+    padding-bottom: 0;
+  }
+}
+
+#search-term {
+  @include font-settings($size: 1rem, $color: $color-text-light);
+}

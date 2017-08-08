@@ -1,0 +1,78 @@
+//============================================================
+// Container Styles
+//============================================================
+
+//------------- Outer -------------
+
+.outer-container {
+  min-height: 100%;
+  padding: $edge-sm;
+  @include mq('tablet') {
+    padding: $edge-med;
+  }
+  @include mq('desktop') {
+    padding: $edge-lg;
+  }
+}
+
+//------------ Title --------------
+
+.title-container {
+  flex-grow: 1;
+}
+
+//------------ Search -------------
+
+.search-container {
+  @include display-flex($justify: center, $align: center);
+  height: 60px;
+  background-color: $color-bg-search;
+}
+
+//------------- Sort --------------
+
+.sort-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $edge-sm;
+  @include mq('mobile') {
+    padding: $edge-sm $edge-med;
+  }
+  @include mq('tablet') {
+    padding: $edge-sm $edge-lg;
+  }
+}
+
+//------------ Cards --------------
+
+.card-container {
+  @include display-flex($wrap: wrap, $justify: space-around);
+  max-width: 1200px;
+  margin: 0 auto ($edge-lg * 2);
+  #message {
+    color: $color-text-gray;
+  }
+}
+
+//---------- Navigation -----------
+
+.lg-nav-container {
+  @include display-flex($align: flex-start);
+  position: fixed;
+  width: 540px;
+  height: $lg-nav-height;
+  z-index: 10000;
+  background-color: $color-bg-body;
+}
+
+//------------ Tracks -------------
+
+.lg-track-container {
+  margin-bottom: 30px;
+}
+
+//---------- Comments -------------
+
+.lg-comment-container {
+  margin-bottom: 50px;
+}

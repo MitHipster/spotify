@@ -1,0 +1,45 @@
+// Font family
+
+%font-primary {
+  font-family: $stack-montserrat;
+}
+
+// Focus
+
+%focus-state {
+  transition: box-shadow .4s ease-out;
+  &:focus {
+    box-shadow: inset 0 0 5px $color-bg-body;
+  }
+}
+
+// Hover
+
+%hover-btn {
+  transition: background-color .4s ease-out;
+  &:hover {
+    color: $color-text-light;
+    background-color: lighten($color-bg-button, 10%);
+  }
+}
+
+%hover-btn-play {
+  transition: background-color .4s ease-out;
+  &:hover {
+    background-color: lighten($color-border, 10%);
+  }
+}
+
+%hover-link {
+  transition: color .3s ease-out;
+  &:hover {
+    color: lighten($color-border, 15%);
+  }
+}
+
+%hover-li-track {
+  transition: background-color .4s ease-out;
+  &:hover {
+    background-color: darken($color-border, 15%);
+  }
+}

@@ -1,0 +1,57 @@
+//============================================================
+// Base Element Styles
+//============================================================
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @extend %font-primary;
+  @include font-settings($color: $color-text-dark);
+  height: 100%;
+  background-color: $color-bg-body;
+}
+
+ul {
+  list-style: none;
+}
+
+figure {
+  @include display-flex(column);
+  flex: 1;
+}
+
+figure,
+h1 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: $color-text-dark;
+}
+
+// Span tag to offset fixed nav height in lightbox to correct album link 
+
+.anchor {
+  display: block;
+  height: $lg-nav-height; /* height of header */
+  margin-top: -$lg-nav-height; /* negative offset */
+  visibility: hidden;
+}

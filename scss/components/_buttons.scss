@@ -1,0 +1,31 @@
+//============================================================
+// Buttons
+//============================================================
+
+//------------ Search -------------
+
+#btn-search {
+  width: 40px;
+  height: 40px;
+  background-color: $color-bg-button;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  @extend %focus-state;
+  @extend %hover-btn;
+}
+
+//------------ Login --------------
+
+#btn-login {
+  font-size: 0.875rem;
+  background-color: $color-bg-button;
+  color: $color-text-light;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  @extend %focus-state;
+  @extend %hover-btn;
+}

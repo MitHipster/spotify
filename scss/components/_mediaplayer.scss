@@ -1,0 +1,14 @@
+//============================================================
+// MediaElement Custom Styles
+//============================================================
+
+.mejs__custom.mejs__container {
+  min-width: 40px !important;
+  max-width: 40px !important;
+  background: none;
+  .mejs__controls {
+    background: none;
+    padding: 1px 0 0 4px;
+    @extend %hover-btn-play;
+  }
+}

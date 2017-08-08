@@ -1,0 +1,55 @@
+//============================================================
+// Card Styles
+//============================================================
+
+li.card {
+  @include display-flex(column);
+  width: 320px - ($edge-sm * 2);
+  @include font-settings($weight: 400, $color: $color-text-light);
+  padding: $edge-sm;
+  margin: 0 0 $edge-sm;
+  .image-overlay {
+    margin: 0 auto $edge-sm;
+  }
+  .card-name {
+    line-height: 1.2rem;
+    border-top: 2px solid $color-border;
+    margin-top: auto;
+    padding-top: $edge-sm / 2;
+  }
+  .card-artist {
+    line-height: 1.1rem;
+    @include font-settings(0.9rem, 300, $color-text-gray);
+    padding-top: $edge-sm / 3;
+  }
+}
+
+.image-overlay {
+  position: relative;
+  .btn-overlay {
+    @include display-flex($justify: center, $align: center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background 0.5s ease;
+  }
+  &:hover .btn-overlay {
+    background: rgba($color-bg-body, 0.5);
+  }
+  .btn-info {
+    text-transform: uppercase;
+    color: $color-btn;
+    border: 2px solid $color-btn;
+    padding: 12px 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease, background-color 0.4s ease;
+    &:hover {
+      background-color: rgba($color-btn-hover, 0.8);
+    }
+  }
+  &:hover .btn-info {
+    opacity: 1;
+  }
+}
